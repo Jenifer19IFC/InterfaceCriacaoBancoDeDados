@@ -18,15 +18,31 @@ $executadorObject = unserialize($_SESSION['executadorObject']);
   <head>
     <title>Tabelas</title>
     <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<style>
+    .container { 
+    width: 500px; 
+    margin-left: auto;
+    margin-right: auto; 
+    }
+    .container2 { 
+    width: 500px; 
+    margin-left: auto;
+    margin-right: auto; 
+    }
+  </style>
   </head>
   <body>
   <form action= "formTabela.php" method="GET">
 
     <fieldset>
-        <br><b>TABELA:</b><br><br>
-      
+      <div class="container">
+        <br><h4><b>ADICIONAR TABELA:</b></h4><br>
         <label for="tab">Nome tabela:</label>
         <input type="text" id="tab" name="tab"><br><br>
+      </div>
+       
         
 
         <?php
@@ -63,11 +79,12 @@ $executadorObject = unserialize($_SESSION['executadorObject']);
 
     
         ?>
-
-  <a href="formCampo.php">Adicionar campos</a>
-  </fieldset><br><br>
-  <input type="submit" id = "sub" value="Salvar dados"><br><br>
-
+        <div class="container2">
+        <input type="submit" id = "sub" value="Salvar dados"><br><br>
+          <a href="formCampo.php">Adicionar campos</a><br><br>
+          
+        </div>
+</fieldset><br><br>
 
   </fieldset>
 

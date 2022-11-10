@@ -16,12 +16,37 @@ session_start();
   <head>
     <title>Form obtém  dados</title>
     <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <style>
+    .container { 
+    width: 500px; 
+    margin-left: auto;
+    margin-right: auto; 
+    }
+    .container2 { 
+    width: 500px; 
+    margin-left: auto;
+    margin-right: auto; 
+    }
+    .container3 { 
+    width: 500px; 
+    margin-left: auto;
+    margin-right: auto; 
+    }
+    .container4 { 
+    width: 500px; 
+    margin-left: auto;
+    margin-right: auto; 
+    }
+  </style>
   </head>
   <body>
   <form action= "" method="GET">
 
     <fieldset>
-        <br><b>CONEXAO:</b><br><br>
+      <div class="container">
+        <br><h5><b>CONEXAO:</b></h5><br>
         <label for="usuario">Usuário:</label>
         <input type="text" id="usuario" name="usuario"><br><br>
         <label for="senha">Senha:</label>
@@ -30,6 +55,8 @@ session_start();
         <input type="text" id="host" name="host"><br><br>
         <label for="porta">Porta:</label>
         <input type="text" id="porta" name="porta"><br><br>
+      </div>
+        
 
         <?php
 
@@ -50,9 +77,12 @@ session_start();
 
   <form action="" method="GET">
       <fieldset>
-        <br><b>DATABASE:</b><br><br>
-        <label for="nomeDb">Nome DataBase:</label>
-        <input type="text" id="nomeDb" name="nomeDb"><br><br>
+        <div class="container2">
+          <br><h5><b>DATABASE:</b></h5><br>
+          <label for="nomeDb">Nome DataBase:</label>
+          <input type="text" id="nomeDb" name="nomeDb"><br><br>
+        </div>
+       
 
         <?php
 
@@ -68,9 +98,12 @@ session_start();
 
   <form action= "" method="GET">
   <fieldset>
-        <br><b>EXECUTADOR:</b><br><br>
+    <div class="container3">
+      <br><h5><b>EXECUTADOR:</b></h5><br>
         <label for="nomeSgbd">Nome SGBD:</label>
         <input type="text" id="nomeSgbd" name="nomeSgbd" value="mysql" readonly><br><br>
+    </div>
+       
         <?php
 
             $nomeSgbd = isset($_GET['nomeSgbd']) ? $_GET['nomeSgbd'] : "";
@@ -96,11 +129,15 @@ session_start();
 
         ?>
         <br>
-  <a href="formTabela.php"> Adicionar tabelas</a>
-  
-  </fieldset>
+        <div class="container4">
+            <input type="submit" value="Salvar dados"><br><br>
+            <a href="formTabela.php"> Adicionar tabelas</a>
+          
+            
+        </div>
+ 
+        </fieldset>
   </fieldset><br><br>
-  <input type="submit" value="Salvar dados"><br><br>
   </fieldset>
 
   </form>

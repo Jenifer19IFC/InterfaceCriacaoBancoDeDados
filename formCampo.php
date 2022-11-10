@@ -16,46 +16,60 @@ $tabela = unserialize($_SESSION['tabela']);
 <html lang="pt-br">  
     <head>  
         <meta charset="utf-8">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<style>
+    .container { 
+    width: 500px; 
+    margin-left: auto;
+    margin-right: auto; 
+    }
+    .container2 { 
+    width: 500px; 
+    margin-left: auto;
+    margin-right: auto; 
+    }
+  </style>
     </head>
     <body>
-        <h1>Adicionar Campo </h1>
-        <a href="FormDataBase.php">  Início​</a>
-        
+        <div class="container">
+                <br><h4><b>ADICIONAR CAMPO:</b></h4><br>
+                <a href="FormDataBase.php">  Início​</a>
+                <br><br>
+                <a href="formTabela.php"> Adicionar tabela</a>
+            <br>
 
-        <br><br>
-        
-        <a href="formTabela.php"> Adicionar tabela</a>
-    <br>
-
-        <form>
-            <BR><BR>
-            <div id="formularioC">
-                <div class="form-groupC">
-                    <label>Nome do campo: </label>
-                    <input type="text" name="nomeCampo" placeholder="Digite o nome do campo"><br>
-                    <label>Tipo: </label>   
-                    <select name="tipos">
-                        <option value="int">int</option>
-                        <option value="varchar(45)">varchar(45)</option>
-                        <option value="decimal(5,3)">decimal(5,3)</option>
-                    </select>
-                        <br><br><input type="checkbox" name="op1" value="pk"> Primary Key
-                        <br><input type="checkbox" name="op2" value="nn"> Não nulo
-                        <br><input type="checkbox" name="op3" value="uq"> Único
-                        <br><input type="checkbox" name="op4" value="b"> Binário
-                        <br><input type="checkbox" name="op5" value="un"> Não assinado
-                        <br><input type="checkbox" name="op6" value="zf"> Valor 0 se for númerico
-                        <br><input type="checkbox" name="op7" value="ai"> Incremento automático
-                        <br><input type="checkbox" name="op8" value="g"> Coluna gerada
-                        
-                </div>
-            </div>
-            <div class="form-groupC">
-                <br><input type="submit" value="Salvar dados"><br><br>
-            </div>
-            <br><br>
-            <br><input type="checkbox" name="fimTabela" value="fimTabela"> Finalizar tabela
-        </form>
+                <form>
+                    <BR><BR>
+                    <div id="formularioC">
+                        <div class="form-groupC">
+                            <label>Nome do campo: </label>
+                            <input type="text" name="nomeCampo" placeholder="Digite o nome do campo"><br>
+                            <label>Tipo: </label>   
+                            <select name="tipos">
+                                <option value="int">int</option>
+                                <option value="varchar(45)">varchar(45)</option>
+                                <option value="decimal(5,3)">decimal(5,3)</option>
+                            </select>
+                                <br><br><input type="checkbox" name="op1" value="pk"> Primary Key
+                                <br><input type="checkbox" name="op2" value="nn"> Não nulo
+                                <br><input type="checkbox" name="op3" value="uq"> Único
+                                <br><input type="checkbox" name="op4" value="b"> Binário
+                                <br><input type="checkbox" name="op5" value="un"> Não assinado
+                                <br><input type="checkbox" name="op6" value="zf"> Valor 0 se for númerico
+                                <br><input type="checkbox" name="op7" value="ai"> Incremento automático
+                                <br><input type="checkbox" name="op8" value="g"> Coluna gerada
+                                
+                        </div>
+                    </div>
+                    <div class="form-groupC">
+                        <br><input type="submit" value="Salvar dados"><br><br>
+                    </div>
+                    <br><br>
+                    <br><input type="checkbox" name="fimTabela" value="fimTabela"> Finalizar tabela
+                </form>
+        </div>
+       
 
         <?php
 
