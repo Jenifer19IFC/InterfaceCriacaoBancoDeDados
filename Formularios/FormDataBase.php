@@ -46,7 +46,7 @@ session_start();
 
     <fieldset>
       <div class="container">
-        <br><h5><b>CONEXAO:</b></h5><br>
+        <br><h5><b>CONEXÃO:</b></h5><br>
         <label for="usuario">Usuário:</label>
         <input type="text" id="usuario" name="usuario"><br><br>
         <label for="senha">Senha:</label>
