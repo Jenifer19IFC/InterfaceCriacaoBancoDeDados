@@ -1,11 +1,11 @@
 <?php
 session_start();
-require_once('Tabela.php');
-require_once('Executador.php');
-require_once('Sgbd.php');
-require_once('Conn.php');
-require_once('DataBase.php');
-require_once('Campo.php');
+require_once('../Classes./Tabela.php');
+require_once('../Classes./Executador.php');
+require_once('../Classes./Sgbd.php');
+require_once('../Classes./Conn.php');
+require_once('../Classes./DataBase.php');
+require_once('../Classes./Campo.php');
 
 $executadorObject = unserialize($_SESSION['executadorObject']);
 $tabela = unserialize($_SESSION['tabela']);
