@@ -68,7 +68,7 @@ session_start();
 
             $conn = new Conexao();
             $conn->setUsuario($usuario);
-            $conn->setSenha($senha);
+            $conn->setSenha($senha);  
             $conn->setHost($host);
             $conn->setPorta($porta);
 
