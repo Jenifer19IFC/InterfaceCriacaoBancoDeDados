@@ -34,7 +34,7 @@ $tabela = unserialize($_SESSION['tabela']);
     <body class="p-3 mb-2 bg-dark text-white">
         <div class="container">
                 <br><br><h5><b><label for="nomeCampo" class="form-label">Adicionar campo</label></b></h5><br>
-                <a href="FormDataBase.php" class="btn btn-warning" tabindex="-1" role="button" aria-disabled="false">Início</a>
+                <a href="FormDataBase.php" class="btn btn-warning  text-white" tabindex="-1" role="button" aria-disabled="false">Início</a>
                 <br><br>
                 <a href="formTabela.php" class="btn btn-success" tabindex="-1" role="button" aria-disabled="false">Adicionar tabela</a>
                 <br>
