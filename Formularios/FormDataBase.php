@@ -19,45 +19,32 @@ session_start();
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <style>
-    .container { 
+   .container { 
     width: 500px; 
-    margin-left: auto;
+    margin-left: 36rem;
     margin-right: auto; 
     }
-    .container2 { 
-    width: 500px; 
-    margin-left: auto;
-    margin-right: auto; 
-    }
-    .container3 { 
-    width: 500px; 
-    margin-left: auto;
-    margin-right: auto; 
-    }
-    .container4 { 
-    width: 500px; 
-    margin-left: auto;
-    margin-right: auto; 
-    }
+ 
+
   </style>
   </head>
-  <body>
+  <body class="p-3 mb-2 bg-dark text-white ">
   <form action= "" method="GET">
 
     <fieldset>
-      <div class="container">
-        <br><h5><b>CONEXÃO:</b></h5><br>
-        <label for="usuario">Usuário:</label>
-        <input type="text" id="usuario" name="usuario"><br><br>
-        <label for="senha">Senha:</label>
-        <input type="text" id="senha" name="senha"><br><br>
-        <label for="host">Host:</label>
-        <input type="text" id="host" name="host"><br><br>
-        <label for="porta">Porta:</label>
-        <input type="text" id="porta" name="porta"><br><br>
-      </div>
-        
-
+        <div class="container">
+            <br><h5><b><label for="nomeDb" class="form-label">Conexão</label></b></h5>
+            <label for="usuario" class="form-label">Usuário</label>
+            <input type="text" class="form-control" id="usuario" aria-describedby="usuario" name="usuario">
+            <label for="senha" class="form-label">Senha</label>
+            <input type="text" class="form-control" id="senha" aria-describedby="senha" name="senha">
+            <label for="host" class="form-label">Host</label>
+            <input type="text" class="form-control" id="host" aria-describedby="host" name="host">
+            <label for="porta" class="form-label">Porta</label>
+            <input type="text" class="form-control" id="porta" aria-describedby="porta" name="porta">
+            <br>  
+          
+          
         <?php
 
             $nome = isset($_GET['nome']) ? $_GET['nome'] : "";
@@ -75,34 +62,27 @@ session_start();
 
         ?>
 
-  <form action="" method="GET">
-      <fieldset>
-        <div class="container2">
-          <br><h5><b>DATABASE:</b></h5><br>
-          <label for="nomeDb">Nome DataBase:</label>
-          <input type="text" id="nomeDb" name="nomeDb"><br><br>
-        </div>
-       
-
+  <form action="" method="GET"> 
+            <br><h5><b><label for="nomeDb" class="form-label">Data Base</label></b></h5>  
+            <label for="nomeDb" class="form-label">Nome Data Base</label>
+            <input type="text" class="form-control" id="nomeDb" aria-describedby="nomeDb" name="nomeDb">
+        
         <?php
-
             $nomeDb = isset($_GET['nomeDb']) ? $_GET['nomeDb'] : "";
            
             $dataBase = new DataBase();
             $dataBase->setNome($nomeDb);
-            
-           
         ?>
     
 
 
   <form action= "" method="GET">
-  <fieldset>
-    <div class="container3">
-      <br><h5><b>EXECUTADOR:</b></h5><br>
-        <label for="nomeSgbd">Nome SGBD:</label>
-        <input type="text" id="nomeSgbd" name="nomeSgbd" value="mysql" readonly><br><br>
-    </div>
+          <br><h5><b><label for="nomeDb" class="form-label">Executador</label></b></h5>
+          <label for="nomeSgbd" class="form-label">Nome Sgbd</label>
+          <select class="form-select form-select-lg-sm mb-3" aria-label=".form-select-lg example" name="nomeSgbd" readonly>
+              <option value="mysql">Mysql</option>
+          </select>
+        
        
         <?php
 
@@ -123,22 +103,25 @@ session_start();
             //Apenas escreve o Executador em formato Json na tela
             //echo json_encode($e);
             
+            
             $executadorSerealizado = serialize($e);
             $_SESSION['executadorObject'] = $executadorSerealizado;
 
 
         ?>
         <br>
-        <div class="container4">
-            <input type="submit" value="Salvar dados"><br><br>
-            <a href="formTabela.php"> Adicionar tabelas</a>
-          
-            
+           
+        <div class="form-group text-center">
+            <button class="btn btn-primary" type="submit">Salvar dados</button><br><br>
+            <a href="formTabela.php" class="btn btn-success" tabindex="-1" role="button" aria-disabled="false">Adicionar tabela</a>
         </div>
- 
+      
+        
+        </div>
+
         </fieldset>
-  </fieldset><br><br>
-  </fieldset>
+  <br><br>
+  
 
   </form>
   </form>

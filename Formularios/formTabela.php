@@ -28,19 +28,19 @@ $executadorObject = unserialize($_SESSION['executadorObject']);
     }
     .container2 { 
     width: 500px; 
-    margin-left: auto;
+    margin-left: 38.5rem;
     margin-right: auto; 
     }
   </style>
   </head>
-  <body>
+  <body class="p-3 mb-2 bg-dark text-white">
   <form action= "formTabela.php" method="GET">
 
     <fieldset>
       <div class="container">
-        <br><h4><b>ADICIONAR TABELA:</b></h4><br>
-        <label for="tab">Nome tabela:</label>
-        <input type="text" id="tab" name="tab"><br><br>
+          <br><h5><b><label for="tab" class="form-label">Adicionar tabela</label></b></h5><br>
+          <label for="tab" class="form-label">Nome da tabela</label>
+          <input type="text" class="form-control" id="tab" aria-describedby="tab" name="tab"><br>
       </div>
        
         
@@ -60,29 +60,30 @@ $executadorObject = unserialize($_SESSION['executadorObject']);
               $_SESSION['tabela'] = $tabelaSerializada;
             }
             
-          }else
-            $bExist = false;
-            for($i=0;$i < count($executadorObject->db->listTabelas); $i++){
-                if($executadorObject->db->listTabelas[$i]->getNome() ==  $tab){
-                    $bExist = true;
-                }
-            }
-          if($bExist == false){
-            if(!($tab == null)){
-                $tabela = new Tabela();
-                $tabela->setNome($tab);
-      
-                $tabelaSerializada = serialize($tabela);
-                $_SESSION['tabela'] = $tabelaSerializada;
+          }else{
+              $bExist = false;
+              for($i=0;$i < count($executadorObject->db->listTabelas); $i++){
+                  if($executadorObject->db->listTabelas[$i]->getNome() ==  $tab){
+                      $bExist = true;
+                  }
+              }
+            if($bExist == false){
+              if(!($tab == null)){
+                  $tabela = new Tabela();
+                  $tabela->setNome($tab);
+        
+                  $tabelaSerializada = serialize($tabela);
+                  $_SESSION['tabela'] = $tabelaSerializada;
+              }
             }
           }
-
     
         ?>
         <div class="container2">
-        <input type="submit" id = "sub" value="Salvar dados"><br><br>
-          <a href="formCampo.php">Adicionar campos</a><br><br>
-          
+          <div class="form-group text-center">
+              <button class="btn btn-primary" type="submit">Salvar dados</button><br><br>
+              <a href="formCampo.php" class="btn btn-success" tabindex="-1" role="button" aria-disabled="false">Adicionar campo</a>
+            </div>
         </div>
 </fieldset><br><br>
 

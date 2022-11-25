@@ -31,42 +31,48 @@ $tabela = unserialize($_SESSION['tabela']);
     }
   </style>
     </head>
-    <body>
+    <body class="p-3 mb-2 bg-dark text-white">
         <div class="container">
-                <br><h4><b>ADICIONAR CAMPO:</b></h4><br>
-                <a href="FormDataBase.php">  Início​</a>
+                <br><br><h5><b><label for="nomeCampo" class="form-label">Adicionar campo</label></b></h5><br>
+                <a href="FormDataBase.php" class="btn btn-warning" tabindex="-1" role="button" aria-disabled="false">Início</a>
                 <br><br>
-                <a href="formTabela.php"> Adicionar tabela</a>
+                <a href="formTabela.php" class="btn btn-success" tabindex="-1" role="button" aria-disabled="false">Adicionar tabela</a>
+                <br>
             <br>
 
                 <form>
-                    <BR><BR>
+                    <BR>
                     <div id="formularioC">
                         <div class="form-groupC">
-                            <label>Nome do campo: </label>
-                            <input type="text" name="nomeCampo" placeholder="Digite o nome do campo"><br>
-                            <label>Tipo: </label>   
-                            <select name="tipos">
-                                <option value="int">int</option>
-                                <option value="varchar(45)">varchar(45)</option>
-                                <option value="decimal(5,3)">decimal(5,3)</option>
+                            <label for="nomeCampo" class="form-label">Nome do campo</label>
+                            <input type="text" class="form-control" id="nomeCampo" aria-describedby="nomeCampo" name="nomeCampo">
+
+                            <br><label for="tipo" class="form-label">Tipo</label>
+
+                            <select class="form-select form-select-lg-sm mb-3" aria-label=".form-select-lg example" name="tipos" readonly>
+                                <option value="int"> <h4>int</h4></option>
+                                <h4><option value="varchar(45)">varchar(45)</option></h4>
+                                <h4><option value="double(5,3)">double(5,3)</option></h4>
                             </select>
-                                <br><br><input type="checkbox" name="op1" value="pk"> Primary Key
-                                <br><input type="checkbox" name="op2" value="nn"> Não nulo
-                                <br><input type="checkbox" name="op3" value="uq"> Único
-                                <br><input type="checkbox" name="op4" value="b"> Binário
-                                <br><input type="checkbox" name="op5" value="un"> Não assinado
-                                <br><input type="checkbox" name="op6" value="zf"> Valor 0 se for númerico
-                                <br><input type="checkbox" name="op7" value="ai"> Incremento automático
-                                <br><input type="checkbox" name="op8" value="g"> Coluna gerada
+                            
+                            <br><input type="checkbox" name="op1" value="pk"> Chave primária
+                            <br><input type="checkbox" name="op2" value="nn"> Não nulo
+                            <br><input type="checkbox" name="op3" value="uq"> Único
+                            <br><input type="checkbox" name="op4" value="b"> Binário
+                            <br><input type="checkbox" name="op5" value="un"> Sem sinal
+                            <br><input type="checkbox" name="op6" value="zf"> Zero a esquerda
+                            <br><input type="checkbox" name="op7" value="ai"> Incremento automático
+                            <br><input type="checkbox" name="op8" value="g"> Coluna gerada
                                 
                         </div>
                     </div>
                     <div class="form-groupC">
-                        <br><input type="submit" value="Salvar dados"><br><br>
-                    </div>
+                        <div class="form-group text-center">
+                            <br><button class="btn btn-primary" type="submit">Salvar dados</button>
+                        </div>
+                        </div>
                     <br><br>
-                    <br><input type="checkbox" name="fimTabela" value="fimTabela"> Finalizar tabela
+                    <input type="checkbox" name="fimTabela" value="fimTabela"> Finalizar tabela
                 </form>
         </div>
        
