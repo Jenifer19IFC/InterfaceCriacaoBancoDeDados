@@ -8,6 +8,7 @@ require_once('../Classes./DataBase.php');
 require_once('../Classes./Campo.php');
 
 $executadorObject = unserialize($_SESSION['executadorObject']);
+if(!empty($_SESSION['tabela']))
 $tabela = unserialize($_SESSION['tabela']);
 
 ?>
@@ -141,6 +142,7 @@ $tabela = unserialize($_SESSION['tabela']);
                 }
                 
             }else
+                if(!empty($_SESSION['tabela']) && !empty($tabela->listCampos)){
                 $bExist = false;
                 for($i=0;$i < count($tabela->listCampos); $i++){
                     if($tabela->listCampos[$i]->getNome() ==  $nomeCampo){
@@ -171,6 +173,7 @@ $tabela = unserialize($_SESSION['tabela']);
                         
                     }
 
+                }
                 }
                     
             
