@@ -35,13 +35,13 @@ session_start();
         <div class="container">
             <br><h5><b><label for="nomeDb" class="form-label">Conexão</label></b></h5>
             <label for="usuario" class="form-label">Usuário</label>
-            <input type="text" class="form-control" id="usuario" aria-describedby="usuario" name="usuario">
+            <input type="text" class="form-control" id="usuario" aria-describedby="usuario" name="usuario" required>
             <label for="senha" class="form-label">Senha</label>
             <input type="text" class="form-control" id="senha" aria-describedby="senha" name="senha">
             <label for="host" class="form-label">Host</label>
-            <input type="text" class="form-control" id="host" aria-describedby="host" name="host">
+            <input type="text" class="form-control" id="host" aria-describedby="host" name="host" required>
             <label for="porta" class="form-label">Porta</label>
-            <input type="text" class="form-control" id="porta" aria-describedby="porta" name="porta">
+            <input type="text" class="form-control" id="porta" aria-describedby="porta" name="porta" required>
             <br>  
           
           
@@ -65,7 +65,7 @@ session_start();
   <form action="" method="GET"> 
             <br><h5><b><label for="nomeDb" class="form-label">Data Base</label></b></h5>  
             <label for="nomeDb" class="form-label">Nome Data Base</label>
-            <input type="text" class="form-control" id="nomeDb" aria-describedby="nomeDb" name="nomeDb">
+            <input type="text" class="form-control" id="nomeDb" aria-describedby="nomeDb" name="nomeDb" required>
         
         <?php
             $nomeDb = isset($_GET['nomeDb']) ? $_GET['nomeDb'] : "";

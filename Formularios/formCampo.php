@@ -46,7 +46,7 @@ $tabela = unserialize($_SESSION['tabela']);
                     <div id="formularioC">
                         <div class="form-groupC">
                             <label for="nomeCampo" class="form-label">Nome do campo</label>
-                            <input type="text" class="form-control" id="nomeCampo" aria-describedby="nomeCampo" name="nomeCampo">
+                            <input type="text" class="form-control" id="nomeCampo" aria-describedby="nomeCampo" name="nomeCampo" required>
 
                             <br><label for="tipo" class="form-label">Tipo</label>
 

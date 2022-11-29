@@ -40,7 +40,7 @@ $executadorObject = unserialize($_SESSION['executadorObject']);
       <div class="container">
           <br><h5><b><label for="tab" class="form-label">Adicionar tabela</label></b></h5><br>
           <label for="tab" class="form-label">Nome da tabela</label>
-          <input type="text" class="form-control" id="tab" aria-describedby="tab" name="tab"><br>
+          <input type="text" class="form-control" id="tab" aria-describedby="tab" name="tab" required><br>
       </div>
        
         
