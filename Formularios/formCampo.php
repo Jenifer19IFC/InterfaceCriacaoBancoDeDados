@@ -35,9 +35,8 @@ $tabela = unserialize($_SESSION['tabela']);
     <body class="p-3 mb-2 bg-dark text-white">
         <div class="container">
                 <br><br><h5><b><label for="nomeCampo" class="form-label">Adicionar campo</label></b></h5><br>
-                <a href="FormDataBase.php" class="btn btn-warning  text-white" tabindex="-1" role="button" aria-disabled="false">Início</a>
-                <br><br>
-                <a href="formTabela.php" class="btn btn-success" tabindex="-1" role="button" aria-disabled="false">Adicionar tabela</a>
+                <a href="FormDataBase.php" class="btn btn-warning  text-white" tabindex="-1" role="button" aria-disabled="false">Início</a> <a href="formTabela.php" class="btn btn-success" tabindex="-1" role="button" aria-disabled="false">Adicionar tabela</a>
+               
                 <br>
             <br>
 
@@ -53,7 +52,7 @@ $tabela = unserialize($_SESSION['tabela']);
                             <select class="form-select form-select-lg-sm mb-3" aria-label=".form-select-lg example" name="tipos" readonly>
                                 <option value="int"> <h4>int</h4></option>
                                 <h4><option value="varchar(45)">varchar(45)</option></h4>
-                                <h4><option value="double(5,3)">double(5,3)</option></h4>
+                                <h4><option value="decimal(5,3)">decimal(5,3)</option></h4>
                             </select>
                             
                             <br><input type="checkbox" name="op1" value="pk"> Chave primária
@@ -68,7 +67,7 @@ $tabela = unserialize($_SESSION['tabela']);
                         </div>
                     </div>
                     <div class="form-groupC">
-                        <div class="form-group text-center">
+                        <div class="form-group text-left">
                             <br><button class="btn btn-primary" type="submit">Salvar dados</button>
                         </div>
                         </div>

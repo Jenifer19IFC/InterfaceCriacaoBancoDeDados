@@ -111,10 +111,21 @@ session_start();
         ?>
         <br>
            
-        <div class="form-group text-center">
-            <button class="btn btn-primary" type="submit">Salvar dados</button><br><br>
+        <div class="form-group text-left">
+            <button class="btn btn-primary" type="submit">Salvar dados</button>
             <a href="formTabela.php" class="btn btn-success" tabindex="-1" role="button" aria-disabled="false">Adicionar tabela</a>
         </div>
+
+        
+       
+
+
+
+
+
+
+
+
       
         
         </div>
