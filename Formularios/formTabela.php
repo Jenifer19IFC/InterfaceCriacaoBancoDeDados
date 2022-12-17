@@ -41,6 +41,7 @@ $executadorObject = unserialize($_SESSION['executadorObject']);
           <br><h5><b><label for="tab" class="form-label">Adicionar tabela</label></b></h5><br>
           <label for="tab" class="form-label">Nome da tabela</label>
           <input type="text" class="form-control-sm" id="tab" aria-describedby="tab" name="tab" required> <button class="btn-sm btn-primary " type="submit">Salvar dados</button><br><br>
+          <a href="formCampo.php" class="btn btn-success" tabindex="-1" role="button" aria-disabled="false">Adicionar campo</a>
       </div>
        
         
@@ -79,11 +80,7 @@ $executadorObject = unserialize($_SESSION['executadorObject']);
           }
     
         ?>
-        <div class="container2">
-          <div class="form-group text-left">
-              <a href="formCampo.php" class="btn btn-success" tabindex="-1" role="button" aria-disabled="false">Adicionar campo</a>
-            </div>
-        </div>
+        
 </fieldset><br><br>
 
   </fieldset>
